@@ -1,4 +1,10 @@
 #include<stdio.h>
+#include<stdlib.h>
+
+typedef struct mystruct {
+	int x;
+	char c;
+} mystruct;
 
 int main() {
 	int x = 5;
@@ -39,4 +45,26 @@ int main() {
 		print p; // 0x0D
 	}
 
+	// arrays and pointers
+	int x[5] = {0}; // initialize to 0
+
+	// int *
+	
+	*x; // x[0]
+	
+	for (int *i = x; i < x + 5; i++) {
+		print i;
+		// iterate over x
+	}
+
+	// structs
+	
+	struct mystruct s;
+	struct mystruct s_arr[10];
+	struct mystruct *s_p = NULL;
+	s_p = malloc(sizeof(*s_p));
+	s.x; // garbage
+	s.x = 0;
+	s_p->x = 0; // (*s_p).x = 5
+	free(s_p);
 }
